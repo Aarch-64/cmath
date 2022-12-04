@@ -1,0 +1,109 @@
+/* window.c -- distribution and version numbers. */
+
+/* Copyright (C) 2022-2022 Agustin Gutierrez.
+
+   This file is part of cmath, math test in c.
+
+   cmath is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+
+   cmath is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with cmath.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include <ncurses.h> // se incluye la libreria ncurses.h
+#include <stdlib.h> // se incluye la libreria stdlib.h
+#include "cmath.h"
+#include "languages.h"
+#include "window.h"
+
+void IniVideo(void){
+       initscr(); /* Crea la ventana */
+       if(!has_colors())
+       {
+        addstr("your terminal does not support colors");
+        Exit();       
+       }
+       else
+       {
+        start_color();
+       }
+
+       init_pair(1,COLOR_WHITE,COLOR_BLACK);
+       init_pair(2,COLOR_GREEN,COLOR_BLACK);
+       init_pair(3,COLOR_BLUE,COLOR_BLACK);
+       init_pair(4,COLOR_RED,COLOR_BLACK);
+       bkgd(COLOR_PAIR(1));
+       attron(A_BOLD);
+       clear(); /* Borra la pantalla entera bajo ncurses */
+       refresh(); /* Actualiza la ventana con los cambios */
+       cbreak();
+}
+
+void Exit(void){
+       refresh(); // refresca la ventana de ncurses
+       endwin(); // finaliza la ventana ncurses
+       exit(1); // devuelve un 1 al sistema operativo huesped.
+}
+
+void TextMain(void){
+
+      if (language == 1)
+        addstr(op3);
+
+      else if (language == 2)
+       addstr(op3_ES);
+
+        scanw("%c",&option);
+          if (option == '+' ||option == '-' ||option == '*' ||option == '/')
+           {
+              if (language == 1)
+                addstr(op2);
+              else if (language == 2)
+                addstr(op2_ES);
+
+              scanw("%lf %lf",&n1, &n2);
+           }
+             else if (option == 'r' ||option == 'c' ||option == 't')
+             {
+                if (language == 1)
+                  addstr(op1);
+
+                else if (language == 2)
+                  addstr(op1_ES);
+           
+                scanw("%lf",&n1);
+             }
+              else if (option == '\0' || option == '\t' || option == ' ')
+                  Exit();
+                else
+                  {
+                  attron(COLOR_PAIR(4)); // color RED and BLACK start
+                    if (language == 1)
+                    {
+                      addstr(Ir);
+                    }
+                    else if (language == 2)
+                    {
+                      addstr(Ir_ES);
+                    } attroff(COLOR_PAIR(4)); // color RED and BLACK disable
+                      
+                  }
+    cmath(); // ejecuta lo escrito en la armadura adelantada cmath que se encuentra en cmath.h
+  
+  attron(A_BLINK);
+  
+    attron(COLOR_PAIR(3));
+  printw("\n\nCtrl C to exit...\n");
+  
+  attroff(A_BLINK);
+    attroff(COLOR_PAIR(3));
+  getch(); //espera una sola pulsación de una sola tecla (sin tener que presionar “Enter”).
+}
