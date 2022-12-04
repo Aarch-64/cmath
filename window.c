@@ -23,6 +23,7 @@
 #include "cmath.h"
 #include "languages.h"
 #include "window.h"
+#include "logs.h"
 
 void IniVideo(void){
        initscr(); /* Crea la ventana */
@@ -50,11 +51,18 @@ void IniVideo(void){
 void Exit(void){
        refresh(); // refresca la ventana de ncurses
        endwin(); // finaliza la ventana ncurses
+       fclose(logfile);
+       exit(1); // devuelve un 1 al sistema operativo huesped.
+}
+
+void ExitNonfclose(void){
+       refresh(); // refresca la ventana de ncurses
+       endwin(); // finaliza la ventana ncurses
        exit(1); // devuelve un 1 al sistema operativo huesped.
 }
 
 void TextMain(void){
-
+fputs("Hello, World!, 2\n",logfile);
       if (language == 1)
         addstr(op3);
 
@@ -101,7 +109,7 @@ void TextMain(void){
   attron(A_BLINK);
   
     attron(COLOR_PAIR(3));
-  printw("\n\nCtrl C to exit...\n");
+  printw("\n\nPress any key to continue...\n");
   
   attroff(A_BLINK);
     attroff(COLOR_PAIR(3));

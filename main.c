@@ -34,8 +34,8 @@ double n2; // se define la variable 'n2' como double (64 bits).
 int main(int argc, char** argv){
 
   IniVideo(); // se la utiliza para inicializar un ventana en modo ncurses.
-    LangMain(); // imprime el texto inicial que espera 1 o 2, y almacena el idioma seleccionado.
+    logcm();
+      LangMain(); // imprime el texto inicial que espera 1 o 2, y almacena el idioma seleccionado.
         TextMain(); // ejecuta la armadura TextMain (window.c).
-  logcm();
   Exit(); // finaliza el modo de ncurses.
 }

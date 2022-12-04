@@ -21,13 +21,16 @@
 #include <ncurses.h> // se incluye la libreria ncurses.h
 #include <stdlib.h> // se incluye la libreria stdlib.h
 #include <unistd.h> // se incluye la libreria unistd.h
+#include <errno.h>
 #include <math.h> // se incluye la libreria math.h
+
 #include "cmath.h" // se incluye la libreria incluida cmath.h
 #include "languages.h" // se incluye la libreria incluida languages.h
+#include "logs.h"
 
 // se declara la armadura cmath.
 void cmath(void){
-
+fputs("Hello, World!, 3",logfile);
    switch(option)
     {
         case '+':
@@ -99,6 +102,10 @@ void cmath(void){
             else if (language == 2)
             {
               printw("\n%s%d\n",prss_ES, getpid());
+            }
+            if(errno==EPERM)
+            {
+              printf("That operation is not permitted.\n");
             } attroff(COLOR_PAIR(4));
             
     }
