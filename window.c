@@ -20,10 +20,10 @@
 
 #include <ncurses.h> // se incluye la libreria ncurses.h
 #include <stdlib.h> // se incluye la libreria stdlib.h
-#include "cmath.h"
-#include "languages.h"
-#include "window.h"
-#include "logs.h"
+#include "include/cmath.h"
+#include "include/languages.h"
+#include "include/window.h"
+#include "include/logs.h"
 
 void IniVideo(void){
        initscr(); /* Crea la ventana */
@@ -59,6 +59,12 @@ void ExitNonfclose(void){
        refresh(); // refresca la ventana de ncurses
        endwin(); // finaliza la ventana ncurses
        exit(1); // devuelve un 1 al sistema operativo huesped.
+}
+
+void exit_s(void){
+       refresh(); // refresca la ventana de ncurses
+       endwin(); // finaliza la ventana ncurses
+       exit(EXIT_SUCCESS); // devuelve un 1 al sistema operativo huesped.
 }
 
 void TextMain(void){
@@ -102,8 +108,8 @@ fputs("Hello, World!, 2\n",logfile);
                     {
                       addstr(Ir_ES);
                     } attroff(COLOR_PAIR(4)); // color RED and BLACK disable
-                      
-                  }
+
+        }
     cmath(); // ejecuta lo escrito en la armadura adelantada cmath que se encuentra en cmath.h
   
   attron(A_BLINK);

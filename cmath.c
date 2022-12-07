@@ -24,9 +24,9 @@
 #include <errno.h>
 #include <math.h> // se incluye la libreria math.h
 
-#include "cmath.h" // se incluye la libreria incluida cmath.h
-#include "languages.h" // se incluye la libreria incluida languages.h
-#include "logs.h"
+#include "include/cmath.h" // se incluye la libreria incluida cmath.h
+#include "include/languages.h" // se incluye la libreria incluida languages.h
+#include "include/logs.h"
 
 // se declara la armadura cmath.
 void cmath(void){

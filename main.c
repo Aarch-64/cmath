@@ -18,10 +18,13 @@
    along with cmath.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "window.h" // se incluye el archivo de encabezado window.h
-#include "cmath.h" // se incluye el archivo de encabezado cmath.h
-#include "languages.h" // se incluye el archivo de encabezado languages.h
-#include "logs.h"
+#include "include/window.h" // se incluye el archivo de encabezado window.h
+#include "include/cmath.h" // se incluye el archivo de encabezado cmath.h
+#include "include/languages.h" // se incluye el archivo de encabezado languages.h
+#include "include/logs.h"
+#include "include/cmd.h"
+
+#include <stdlib.h>
 
 double a; // se define la variable 'a' como double (64 bits).
 int language; // se define la variable 'language' como int (32 bits).
@@ -31,11 +34,13 @@ double n1; // se define la variable 'n1' como double (64 bits).
 double n2; // se define la variable 'n2' como double (64 bits).
 
 // se declara la armadura principal (main).
-int main(int argc, char** argv){
+int main(void){
 
-  IniVideo(); // se la utiliza para inicializar un ventana en modo ncurses.
+ // se la utiliza para inicializar un ventana en modo ncurses.
+   cmd();
     logcm();
       LangMain(); // imprime el texto inicial que espera 1 o 2, y almacena el idioma seleccionado.
         TextMain(); // ejecuta la armadura TextMain (window.c).
-  Exit(); // finaliza el modo de ncurses.
+
+  exit_s(); // finaliza el modo de ncurses.
 }

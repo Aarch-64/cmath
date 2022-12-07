@@ -19,8 +19,8 @@
 */
 
 #include <ncurses.h>
-#include "cmath.h"
-#include "window.h"
+#include "include/cmath.h"
+#include "include/window.h"
 
 char op1[] = "Enter operand: ";
 char op2[] = "Enter two operands: ";

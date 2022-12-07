@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=cmath
+GenericName=Calculator
+Comment=Basic Calculator Write in C
+Exec=/usr/bin/cmath %F
+Terminal=true
+Icon=/home/agustin/code/cmath/git/linux.png
+

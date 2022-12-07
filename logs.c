@@ -22,7 +22,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <ncurses.h>
-#include "window.h"
+#include "include/window.h"
 
 FILE *logfile;
 char logdir[] = "/tmp/logs_cmath.log";
@@ -33,7 +33,7 @@ void logcm(void){
   {
     printw("\nerror to write logs_cmath.log in /tmp.\n");
     refresh();
-    sleep(2); /* sleep for 1 second*/
+    sleep(2); /* sleep for 2 second*/
     ExitNonfclose();
   }
   else
