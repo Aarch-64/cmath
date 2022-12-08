@@ -9,7 +9,7 @@ void cmd(int argc, char *argv[])
     char ver[] = "--version";
     char hel[] = "--help";
 
-    char namever[] = "cmath 0.1\n";
+    char namever[] = "cmath 0.3\n";
     char builver[] = "Este programa fue construido para x86_64-pc-linux-gnu\n";
     char copyver[] = "Copyright (C) 2022-2022 Agustin Gutierrez.\n";
     char licever[] = "Licencia GPLv3+: GNU GPL versión 3 o posterior <http://gnu.org/licenses/gpl.html>\n\n";
