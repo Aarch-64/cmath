@@ -1,30 +1,13 @@
-CC=clang
-CLIBS=-lm -lncurses
-CFLAGS=-Wall -Wextra -O2 -g -std=gnu99
 
-OBJS= \
-	cmath.o \
-	main.o \
-	window.o \
-	languages.o \
-	logs.o \
-	cmd.o
+all:
+	@echo "Building..."
+	make -C ./src
 
-default: all
-
-all: main
-
-main: $(OBJS)
-	$(CC) $(CFLAGS) -o cmath $(OBJS) $(CLIBS)
+run:
+	make -C ./src run
 
 clean:
-	@rm main.o cmath.o window.o languages.o logs.o cmd.o cmath goodies/cmath
-	
-run: 
-	@./cmath
+	make -C ./src clean	
 
 install:
-
-	@cp cmath goodies/ -r
-	-sudo cp goodies/cmath /usr/bin/ -r
-	-sudo cp goodies/cmath.desktop /usr/share/applications/ -r
+	make -C ./src install
