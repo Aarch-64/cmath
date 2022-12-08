@@ -30,3 +30,7 @@ to compile run
 to compile clear
 
 ### $`make clean`
+
+to install (only Linux)
+
+### $`make install`
