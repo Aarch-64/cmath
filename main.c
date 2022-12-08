@@ -24,8 +24,6 @@
 #include "include/logs.h"
 #include "include/cmd.h"
 
-#include <stdlib.h>
-
 double a; // se define la variable 'a' como double (64 bits).
 int language; // se define la variable 'language' como int (32 bits).
 char option; // se define la variable 'option' como char (1 bit).
