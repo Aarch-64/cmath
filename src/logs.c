@@ -18,11 +18,12 @@
    along with cmath.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <ncurses.h>
-#include "include/window.h"
+#include <stdio.h> // se incluye la libreria stdio.h
+#include <stdlib.h> // se incluye la libreria stdlib.h
+#include <unistd.h> // se incluye la libreria unistd.h
+#include <ncurses.h> // se incluye la libreria ncurses.h
+
+#include "include/window.h" // se incluye el archivo de encabezado window.h
 
 FILE *logfile;
 char logdir[] = "/tmp/logs_cmath.log";

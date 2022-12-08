@@ -18,9 +18,10 @@
    along with cmath.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <ncurses.h>
-#include "include/cmath.h"
-#include "include/window.h"
+#include <ncurses.h> // se incluye la libreria ncurses.h
+
+#include "include/cmath.h" // se incluye el archivo de encabezado cmath.h
+#include "include/window.h" // se incluye el archivo de encabezado window.h
 
 char op1[] = "Enter operand: ";
 char op2[] = "Enter two operands: ";

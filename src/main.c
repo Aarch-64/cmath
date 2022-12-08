@@ -21,8 +21,8 @@
 #include "include/window.h" // se incluye el archivo de encabezado window.h
 #include "include/cmath.h" // se incluye el archivo de encabezado cmath.h
 #include "include/languages.h" // se incluye el archivo de encabezado languages.h
-#include "include/logs.h"
-#include "include/cmd.h"
+#include "include/logs.h" // se incluye el archivo de encabezado logs.h
+#include "include/cmd.h" // se incluye el archivo de encabezado cmd.h
 
 double a; // se define la variable 'a' como double (64 bits).
 int language; // se define la variable 'language' como int (32 bits).

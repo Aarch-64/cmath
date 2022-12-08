@@ -21,12 +21,12 @@
 #include <ncurses.h> // se incluye la libreria ncurses.h
 #include <stdlib.h> // se incluye la libreria stdlib.h
 #include <unistd.h> // se incluye la libreria unistd.h
-#include <errno.h>
+#include <errno.h> // se incluye la libreria errno.h
 #include <math.h> // se incluye la libreria math.h
 
-#include "include/cmath.h" // se incluye la libreria incluida cmath.h
-#include "include/languages.h" // se incluye la libreria incluida languages.h
-#include "include/logs.h"
+#include "include/cmath.h" // se incluye el archivo de encabezado cmath.h
+#include "include/languages.h" // se incluye el archivo de encabezado languages.h
+#include "include/logs.h" // se incluye el archivo de encabezado logs.h
 
 // se declara la armadura cmath.
 void cmath(void){
