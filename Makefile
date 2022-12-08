@@ -1,6 +1,6 @@
 CC=clang
 CLIBS=-lm -lncurses
-CFLAGS=-Wall -Wextra -O2 -fno-stack-protector -std=gnu99
+CFLAGS=-Wall -Wextra -O2 -g -fno-stack-protector -std=gnu99
 
 OBJS= \
 	cmath.o \
