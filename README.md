@@ -5,6 +5,12 @@
 <img src="https://github.com/AgustinGutierrez0/cmath/blob/main/screenshots/Screenshot_2022-12-04 18-23-51.png"/>
 <br>
 
+#
+
+<br>
+<img src="https://github.com/AgustinGutierrez0/cmath/blob/main/screenshots/Screenshot_2022-12-07 21-44-47.png"/>
+<br>
+
 # Dependencies
 
 ### -`ncurses`
