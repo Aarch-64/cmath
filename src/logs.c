@@ -2,9 +2,11 @@
 // logs.c
 // cmath
 //
+// Created by Aarch-64 on 6/12/2022
 // Last modification by Aarch-64 on 10/12/2022
 // Copyright © 2022 Aarch-64. All rights reserved.
 //
+
 #include <stdio.h> // se incluye la libreria stdio.h
 #include <stdlib.h> // se incluye la libreria stdlib.h
 #include <unistd.h> // se incluye la libreria unistd.h
