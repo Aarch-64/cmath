@@ -21,7 +21,7 @@
 #include <stdio.h> // se incluye la libreria stdio.h
 #include <string.h> // se incluye la libreria string.h
 
-#include "include/window.h" // se incluye el archivo de encabezado window.h
+#include "include/win.h" // se incluye el archivo de encabezado window.h
 
 void cmd(int argc, char *argv[])
 {

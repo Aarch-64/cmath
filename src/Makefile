@@ -5,8 +5,8 @@ CFLAGS=-Wall -Wextra -O2 -g -std=gnu99
 OBJS= \
 	cmath.o \
 	main.o \
-	window.o \
-	languages.o \
+	win.o \
+	lang.o \
 	logs.o \
 	cmd.o
 

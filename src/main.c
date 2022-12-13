@@ -18,9 +18,9 @@
    along with cmath.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "include/window.h" // se incluye el archivo de encabezado window.h
+#include "include/win.h" // se incluye el archivo de encabezado window.h
 #include "include/cmath.h" // se incluye el archivo de encabezado cmath.h
-#include "include/languages.h" // se incluye el archivo de encabezado languages.h
+#include "include/lang.h" // se incluye el archivo de encabezado languages.h
 #include "include/logs.h" // se incluye el archivo de encabezado logs.h
 #include "include/cmd.h" // se incluye el archivo de encabezado cmd.h
 

@@ -22,8 +22,8 @@
 #include <stdlib.h> // se incluye la libreria stdlib.h
 
 #include "include/cmath.h" // se incluye el archivo de encabezado cmath.h
-#include "include/languages.h" // se incluye el archivo de encabezado languagues.h
-#include "include/window.h" // se incluye el archivo de encabezado window.h
+#include "include/lang.h" // se incluye el archivo de encabezado languagues.h
+#include "include/win.h" // se incluye el archivo de encabezado window.h
 #include "include/logs.h" // se incluye el archivo de encabezado logs.h
 
 void IniVideo(void){

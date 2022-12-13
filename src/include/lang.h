@@ -1,3 +1,6 @@
+#ifndef LANG_H_
+#define LANG_H_
+
 typedef struct lan_EN
 {
   char op1[16];
@@ -38,3 +41,5 @@ extern lan2 lang_es;
 void LangMain();
 
 void defvar();
+
+#endif // LANG_H_

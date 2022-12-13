@@ -22,8 +22,8 @@
 #include <string.h>
 
 #include "include/cmath.h" // se incluye el archivo de encabezado cmath.h
-#include "include/window.h" // se incluye el archivo de encabezado window.h
-#include "include/languages.h"
+#include "include/win.h" // se incluye el archivo de encabezado window.h
+#include "include/lang.h"
 
 lan1 lang_en;
 lan2 lang_es;

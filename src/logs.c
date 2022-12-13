@@ -23,7 +23,7 @@
 #include <unistd.h> // se incluye la libreria unistd.h
 #include <ncurses.h> // se incluye la libreria ncurses.h
 
-#include "include/window.h" // se incluye el archivo de encabezado window.h
+#include "include/win.h" // se incluye el archivo de encabezado window.h
 
 FILE *logfile;
 char logdir[] = "/tmp/logs_cmath.log";

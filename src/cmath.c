@@ -25,7 +25,7 @@
 #include <math.h> // se incluye la libreria math.h
 
 #include "include/cmath.h" // se incluye el archivo de encabezado cmath.h
-#include "include/languages.h" // se incluye el archivo de encabezado languages.h
+#include "include/lang.h" // se incluye el archivo de encabezado languages.h
 #include "include/logs.h" // se incluye el archivo de encabezado logs.h
 
 // se declara la armadura cmath.
