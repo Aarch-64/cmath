@@ -1,37 +1,40 @@
-extern char op1[];
-extern char op2[];
-extern char op3[];
-extern char errOP[];
+typedef struct lan_EN
+{
+  char op1[16];
+  char op2[21];
+  char op3[42];
+  char errOP[31];
 
-extern char mr[];
-extern char mc[];
-extern char mt[];
+  char b1[23];
+  char b2[23];
 
-extern char b1[];
-extern char b2[];
+  char Ir[16];
+  
+  char memdir[20];
 
-extern char Ir[];
+  char prss[20];
+} lan1;
 
-extern char memdir[];
+typedef struct lan_ES
+{
+  char op1[25];
+  char op2[28];
+  char op3[44];
+  char errOP[31];
 
-extern char prss[];
+  char b1[25];
+  char b2[25];
 
-extern char op1_ES[];
-extern char op2_ES[];
-extern char op3_ES[];
-extern char errOP_ES[];
+  char Ir[15];
+  
+  char memdir[20];
 
-extern char mr_ES[];
-extern char mc_ES[];
-extern char mt_ES[];
+  char prss[20];
+} lan2;
 
-extern char b1_ES[];
-extern char b2_ES[];
-
-extern char Ir_ES[];
-
-extern char memdir_ES[];
-
-extern char prss_ES[];
+extern lan1 lang_en;
+extern lan2 lang_es;
 
 void LangMain();
+
+void defvar();

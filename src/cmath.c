@@ -53,21 +53,21 @@ fputs("Hello, World!, 3",logfile);
             break;
         case 'r':
             if (language == 1)
-               printw(mr, n1, sqrt((n1 * 180.0 / PI)),(n1 * PI / 180.0));
+               printw("rad %.0lf\nDEG: %.5lf\nRAD: %.5lf", n1, sqrt((n1 * 180.0 / PI)),(n1 * PI / 180.0));
             else if (language == 2)
-               printw(mr_ES, n1, sqrt((n1 * 180.0 / PI)),(n1 * PI / 180.0));
+               printw("raiz de: %.0lf\nDEG: %.5lf\nRAD: %.5lf", n1, sqrt((n1 * 180.0 / PI)),(n1 * PI / 180.0));
             break;
         case 'c':
             if (language == 1)
-               printw(mc ,n1, cos((n1 * 180.0 / PI)),(n1 * PI / 180.0));
+               printw("coseno de: %.0lf\nDEG: %.5lf\nRAD: %.5lf",n1, cos((n1 * 180.0 / PI)),(n1 * PI / 180.0));
             else if (language == 2)
-               printw(mc_ES ,n1, cos((n1 * 180.0 / PI)),(n1 * PI / 180.0));
+               printw("coss %.0lf:\nDEG: %.5lf\nRAD: %.5lf",n1, cos((n1 * 180.0 / PI)),(n1 * PI / 180.0));
             break;
         case 't':
             if (language == 1)
-               printw(mt ,n1, tan((n1 * 180.0 / PI)),(n1 * PI / 180.0));
+               printw("tan %.0lf\nDEG: %.5lf\nRAD: %.5lf",n1, tan((n1 * 180.0 / PI)),(n1 * PI / 180.0));
             else if (language == 2)
-               printw(mt_ES ,n1, tan((n1 * 180.0 / PI)),(n1 * PI / 180.0));
+               printw("tangente de: %.0lf\nDEG: %.5lf\nRAD: %.5lf",n1, tan((n1 * 180.0 / PI)),(n1 * PI / 180.0));
             break;
 
         // operator doesn't match any case constant +, -, *, /
@@ -75,33 +75,33 @@ fputs("Hello, World!, 3",logfile);
          attron(COLOR_PAIR(4));
             if (language == 1)
             {
-               printw("\n\n%s\n",errOP);
+               printw("\n\n%s\n",lang_en.errOP);
             }
             else if (language == 2)
             {
-               printw("\n\n%s\n",errOP_ES);
+               printw("\n\n%s\n",lang_es.errOP);
             }
             if (language == 1)
             {
-               printw("%s%ld\n",b1, sizeof(n1));
-               printw("%s%p\n\n",memdir, &n1);
-               printw("%s%ld\n",b2, sizeof(n2));
-               printw("%s%p\n",memdir ,&n2);
+               printw("%s%ld\n",lang_en.b1, sizeof(n1));
+               printw("%s%p\n\n",lang_en.memdir, &n1);
+               printw("%s%ld\n",lang_en.b2, sizeof(n2));
+               printw("%s%p\n",lang_en.memdir ,&n2);
             }
             else if (language == 2)
             {
-               printw("%s%ld\n",b1_ES, sizeof(n1));
-               printw("%s%p\n\n",memdir_ES, &n1);
-               printw("%s%ld\n",b2_ES, sizeof(n2));
-               printw("%s%p\n",memdir_ES, &n2);
+               printw("%s%ld\n",lang_es.b1, sizeof(n1));
+               printw("%s%p\n\n",lang_es.memdir, &n1);
+               printw("%s%ld\n",lang_es.b2, sizeof(n2));
+               printw("%s%p\n",lang_es.memdir, &n2);
             }
             if (language == 1)
             {
-              printw("\n%s%d\n",prss, getpid());
+              printw("\n%s%d\n",lang_en.prss, getpid());
             }
             else if (language == 2)
             {
-              printw("\n%s%d\n",prss_ES, getpid());
+              printw("\n%s%d\n",lang_es.prss, getpid());
             }
             if(errno==EPERM)
             {

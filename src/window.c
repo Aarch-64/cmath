@@ -69,30 +69,31 @@ void exit_s(void){
 }
 
 void TextMain(void){
-fputs("Hello, World!, 2\n",logfile);
+  defvar();
+  fputs("Hello, World!, 2\n",logfile);
       if (language == 1)
-        addstr(op3);
+        addstr(lang_en.op3);
 
       else if (language == 2)
-       addstr(op3_ES);
+       addstr(lang_es.op3);
 
         scanw("%c",&option);
           if (option == '+' ||option == '-' ||option == '*' ||option == '/')
            {
               if (language == 1)
-                addstr(op2);
+                addstr(lang_en.op2);
               else if (language == 2)
-                addstr(op2_ES);
+                addstr(lang_es.op2);
 
               scanw("%lf %lf",&n1, &n2);
            }
              else if (option == 'r' ||option == 'c' ||option == 't')
              {
                 if (language == 1)
-                  addstr(op1);
+                  addstr(lang_en.op1);
 
                 else if (language == 2)
-                  addstr(op1_ES);
+                  addstr(lang_es.op1);
            
                 scanw("%lf",&n1);
              }
@@ -103,11 +104,11 @@ fputs("Hello, World!, 2\n",logfile);
                   attron(COLOR_PAIR(4)); // color RED and BLACK start
                     if (language == 1)
                     {
-                      addstr(Ir);
+                      addstr(lang_en.Ir);
                     }
                     else if (language == 2)
                     {
-                      addstr(Ir_ES);
+                      addstr(lang_es.Ir);
                     } attroff(COLOR_PAIR(4)); // color RED and BLACK disable
 
         }

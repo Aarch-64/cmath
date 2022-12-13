@@ -19,45 +19,47 @@
 */
 
 #include <ncurses.h> // se incluye la libreria ncurses.h
+#include <string.h>
 
 #include "include/cmath.h" // se incluye el archivo de encabezado cmath.h
 #include "include/window.h" // se incluye el archivo de encabezado window.h
+#include "include/languages.h"
 
-char op1[] = "Enter operand: ";
-char op2[] = "Enter two operands: ";
-char op3[] = "Enter an operator (+, -, *, /, r, c, t): ";
-char errOP[] = "Error! operator is not correct";
+lan1 lang_en;
+lan2 lang_es;
 
-char mr[] = "rad of: %.0lf\nDEG: %lf\nRAD: %lf";
-char mc[] = "coss of: %.0lf\nDEG: %lf\nRAD: %lf";
-char mt[] = "tan of: %.0lf\nDEG: %lf\nRAD: %lf";
+void defvar(void){
 
-char b1[] = "bytes of variable 1: ";
-char b2[] = "bytes of variable 2: ";
+// lang_en
+strcpy(lang_en.op1, "Enter operand: ");
+strcpy(lang_en.op2, "Enter two operands: ");
+strcpy(lang_en.op3, "Enter an operator (+, -, *, /, r ,c ,t): ");
+strcpy(lang_en.errOP, "Error! operator is not correct");
 
-char Ir[] = "Internal Error!";
+strcpy(lang_en.b1, "bytes of variable 1: ");
+strcpy(lang_en.b2, "bytes of variable 2: ");
 
-char memdir[] = "Memory Directory: ";
+strcpy(lang_en.Ir, "Internal Error!");
 
-char prss[] = "Prosess: ";
+strcpy(lang_en.memdir, "Memory Directory: ");
 
-char op1_ES[] = "Introduzca un operador: ";
-char op2_ES[] = "Introduzca dos operadores: ";
-char op3_ES[] = "Introduzca operador (+, -, *, /, r, c, t): ";
-char errOP_ES[] = "Error! el operador no es correcto";
+strcpy(lang_en.prss, "Prosess: ");
 
-char mr_ES[] = "raiz de: %.0lf\nDEG: %lf\nRAD: %lf";
-char mc_ES[] = "coseno de: %.0lf\nDEG: %lf\nRAD: %lf";
-char mt_ES[] = "tangente de: %.0lf\nDEG: %lf\nRAD: %lf";
+// lang_es
+strcpy(lang_es.op1, "Introduzca un operador: ");
+strcpy(lang_es.op2, "Introduzca dos operadores: ");
+strcpy(lang_es.op3, "Introduzca operador (+, -, *, /, r, c, t): ");
+strcpy(lang_es.errOP, "Error! el operador no es correcto");
 
-char b1_ES[] = "bytes de la variable 1: ";
-char b2_ES[] = "bytes de la variable 2: ";
+strcpy(lang_es.b1, "bytes de la variable 1: ");
+strcpy(lang_es.b2, "bytes de la variable 2: ");
 
-char Ir_ES[] = "Error Interno!";
+strcpy(lang_es.Ir, "Error Interno!");
 
-char memdir_ES[] = "Direccion de memoria: ";
+strcpy(lang_es.memdir, "Direccion de memoria: ");
 
-char prss_ES[] = "Proseso: ";
+strcpy(lang_es.prss, "Proseso: ");
+}
 
 void LangMain(void){
           attron(COLOR_PAIR(2));
