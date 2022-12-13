@@ -18,7 +18,7 @@ main: $(OBJS)
 	$(CC) $(CFLAGS) -o ../cmath $(OBJS) $(CLIBS)
 
 clean:
-	@rm main.o cmath.o window.o languages.o logs.o cmd.o ../cmath 
+	@rm main.o cmath.o win.o lang.o logs.o cmd.o ../cmath 
 	
 run:
 	@.././cmath
