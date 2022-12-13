@@ -1,4 +1,4 @@
-/* window.c -- distribution and version numbers. */
+/* win.c -- distribution and version numbers. */
 
 /* Copyright (C) 2022-2022 Agustin Gutierrez.
 

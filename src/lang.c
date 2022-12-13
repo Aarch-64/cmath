@@ -1,4 +1,4 @@
-/* languages.c -- distribution and version numbers. */
+/* lang.c -- distribution and version numbers. */
 
 /* Copyright (C) 2022-2022 Agustin Gutierrez.
 
